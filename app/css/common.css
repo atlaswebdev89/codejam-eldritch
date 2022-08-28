@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body {
+    background-image: url(../assets/images/home.635012cb5c1e192ab1c6.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}

@@ -26,6 +26,12 @@ module.exports = {
     output: {
         path: pathDest,
         filename: '[name]',
+
+        // Соответствие путей
+        assetModuleFilename: pathData => {
+            const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
+            return `${filepath}/[name][ext]`;
+        },
     },
     optimization: {
         minimize: true,
@@ -43,23 +49,29 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
-              }
+              },
+              // изображения
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
+            }
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Codejam',
             template: pathSrc + '/index.html', // шаблон
             inject: 'body',
             filename: 'index.html', // название выходного файла
         }),
         new CleanWebpackPlugin(),
-        //new CopyPlugin({
-        //    patterns: [
-        //    { from: pathSrc +"/images", to: "images", },
+        new CopyPlugin({
+            patterns: [
+         //   { from: pathSrc +"/images", to: "images", },
         //    { from: pathSrc + "/fonts", to: "fonts" },
-        //    { from: pathSrc + "/assets", to: "assets" },
-        //  ]
-        //}),
+            { from: pathSrc + "/assets", to: "assets" },
+          ]
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/style.min.css',
           }),

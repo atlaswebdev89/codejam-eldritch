@@ -1,0 +1,103 @@
+.tracker-decks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  text-align: center;
+  color: #ffffff;
+}
+.hide-display {
+  display: none;
+}
+.hide-opacity {
+  opacity: 0;
+}
+.show-opacity {
+  opacity: 1;
+}
+
+.prev {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.stages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.greenCards,
+.blueCards,
+.brownCards {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.greenCards {
+  background-color: green;
+}
+.blueCards {
+  background-color: blue;
+}
+.brownCards {
+  background-color: burlywood;
+}
+.decks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.decks-floor, .decks-done {
+  height: 300px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 5px solid transparent;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 20px;
+  opacity: 0.8;
+}
+.decks-done {
+  display: none;
+  width: 200px;
+}
+.show-decks-done {
+  display: block;
+}
+
+.decks-floor:hover {
+  opacity: 1;
+  box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.494);
+}
+.karta {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.previus {
+  color: aqua;
+}
+.headers {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.name-ancients {
+  color: aquamarine;
+}
+.name-level {
+  color: aquamarine;
+}
+.active-stage {
+  color: #ff859c;
+}

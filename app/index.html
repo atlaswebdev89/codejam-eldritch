@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codejam</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-<body>
-    
+<body class="body">
+    <div class="wrapper">
+        <div class="ancients-button">
+            <section class="ancients">
+                <div class="wrapper-ancients">
+                </div>
+            </section>
+            <section class="buttons-level">
+                <button data-level = "easing" class="button level">Очень легкий</button>
+                <button data-level = "easy" class="button level">Легкий</button>
+                <button data-level = "normal" class="button level">Средний</button>
+                <button data-level = "hard" class="button level">Высокий</button>
+                <button data-level = "harded" class="button level">Очень высокий</button>
+            </section>
+            <section class="button-mixer">
+                <button class="mixer" disabled="disabled">Замешать колоду</button>
+            </section>
+        </div>
+        <div class="tracker-decks hide-display hide-opacity">
+            <section class="headers">
+                <p>Название древнего: <span class="name-ancients">Азатрон</span></p>
+                <p>Уровень игры: <span class="name-level">Средний</span></p>
+            </section>
+            <section class="prev">
+                <button class="button back">Назад</button>
+            </section>
+            <section class="tracker">
+                <div class="tracker-wrapper">
+                    <div class="firstStage">
+                        <h5 class="name-stage active-stage">Первая стадия</h5>
+                        <div class="stages">
+                            <div class="greenCards"></div>
+                            <div class="brownCards"></div>
+                            <div class="blueCards"></div>
+                        </div>
+                    </div>
+                    <div class="secondStage">
+                        <h5 class="name-stage">Вторая стадия</h5>
+                        <div class="stages">
+                            <div class="greenCards"></div>
+                            <div class="brownCards"></div>
+                            <div class="blueCards"></div>
+                        </div>
+                    </div>
+                    <div class="thirdStage">
+                        <h5 class="name-stage">Третья стадия</h5>
+                        <div class="stages">
+                            <div class="greenCards"></div>
+                            <div class="brownCards"></div>
+                            <div class="blueCards"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="decks">
+                <div class="decks-floor">
+                    <img class="karta" src="assets/images/mythicCardBackground.6cfef7456fa52cb3c0c7.png">
+                </div>
+                <div class="decks-done"></div>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
