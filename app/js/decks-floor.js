@@ -28,7 +28,7 @@ const createKartinDecks = (item) => {
     if(item) {
         console.log(item);
         decksDone.classList.add('show-decks-done');
-        decksDone.innerHTML = `<img class ="ancient" src=${item.cardFace}/>`;
+        decksDone.innerHTML = `<img class ="ancient" src="${item.cardFace}"/>`;
     }else {
         decksDone.classList.remove('show-decks-done');
     }
